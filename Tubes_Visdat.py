@@ -31,9 +31,6 @@ start_date = df['date'].min().to_pydatetime()
 end_date = df['date'].max().to_pydatetime()
 date_range = st.slider("Date Range", min_value=start_date, max_value=end_date, value=(start_date, end_date))
 
-# Create a button to trigger data update
-update_button = st.button("Update Data")
-
 # Create a callback function for the button click event
 def update_data():
     # Get the selected country and date range
@@ -55,10 +52,6 @@ def update_data():
     
 # Set initial data to show total cases for all countries
 update_data()
-
-# Handle button click event
-if update_button:
-    update_data()
 
 # Plot the line chart
 line = p.line(x='date', y='new_cases_smoothed', source=source, line_width=2)
