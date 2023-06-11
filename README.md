@@ -27,16 +27,19 @@ Run the following command to start the web application:
 
 Open CMD
 Copy code
-streamlit run app.py
+'streamlit run app.py'
 
 # Dependencies
 The following are the main dependencies used in this project:
 
-pandas
-bokeh
-streamlit
+*pandas
+*bokeh
+*streamlit
+
 These dependencies are listed in the requirements.txt file.
 
 # Contributors
-Abu Rijal (aburijal26)
+[LinkedIn](https://www.linkedin.com/in/muhammad-abu-rijal-kusnaedi/)
+
+[Portfolio](https://aburijal26.wixsite.com/portfolio) 
 Please feel free to contribute to this project by submitting issues or pull requests.
