@@ -27,7 +27,7 @@ pip install -r requirements.txt
 Run the following command to start the web application:
 
 ```
-streamlit run app.py
+streamlit run Tubes_Visdat.py
 ```
 
 # Dependencies
