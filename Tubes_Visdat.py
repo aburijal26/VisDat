@@ -8,12 +8,14 @@ import streamlit as st
 data_url = "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv"
 df = pd.read_csv(data_url)
 df = df[df['continent'] == 'Asia']
+se_asia_countries = ['Brunei', 'Cambodia', 'Indonesia', 'Laos', 'Malaysia', 'Myanmar', 'Philippines', 'Singapore', 'Thailand', 'Timor', 'Vietnam']
+df = df[df['location'].isin(se_asia_countries)]
 
 # Convert date column to datetime type
 df['date'] = pd.to_datetime(df['date'])
 
 # Set the header/title
-st.markdown("<h1 style='text-align: center; font-size: 24px;'>COVID-19 Cases in Asia</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; font-size: 24px;'>COVID-19 Cases in Southeast Asia</h1>", unsafe_allow_html=True)
 
 # Create a figure for the line chart
 p = figure(width=700, height=300, x_axis_type="datetime")
@@ -23,7 +25,7 @@ source = ColumnDataSource(df)
 
 # Create a select widget for choosing the country
 countries = df['location'].unique().tolist()
-countries.insert(0, "All Countries")  # Add "All Countries" option
+countries.insert(0, "Select All")  # Add "Select All" option
 country_select = st.selectbox("Country", countries)
 
 # Create a slider widget for selecting the date range
@@ -37,20 +39,20 @@ def update_data():
     country = country_select
     start_date = date_range[0]
     end_date = date_range[1]
-    
-    if country == "All Countries":
-        # Calculate total cases for all countries and date range
+
+    if country == "Select All":
+        # Calculate total cases for all Southeast Asian countries and date range
         filtered_data = df[(df['date'] >= start_date) & (df['date'] <= end_date)]
         filtered_data = filtered_data.groupby('date')['new_cases_smoothed'].sum().reset_index()
-        country = "All Countries"
+        country = "Southeast Asia"
     else:
         # Filter the data based on the selected country and date range
         filtered_data = df[(df['location'] == country) & (df['date'] >= start_date) & (df['date'] <= end_date)]
-    
+
     # Update the data source with the filtered data
     source.data = ColumnDataSource(filtered_data).data.copy()
-    
-# Set initial data to show total cases for all countries
+
+# Set initial data to show total cases for Southeast Asia
 update_data()
 
 # Plot the line chart
