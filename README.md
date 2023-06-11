@@ -20,15 +20,11 @@ Clone this repository to your local machine.
 
 Install the required Python packages using the following command:
 
-Copy code
-
 ```
 pip install -r requirements.txt
 ```
 
 Run the following command to start the web application:
-
-Copy code
 
 ```
 streamlit run app.py
