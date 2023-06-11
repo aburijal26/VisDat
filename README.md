@@ -2,7 +2,7 @@
 This repository contains the code and files for the Tugas Besar Visualisasi Data project, which includes a web application built with Streamlit.
 
 # Project Description
-The Tugas Besar Visualisasi Data project is a web application that provides interactive visualizations of COVID-19 in Asia data. The application uses data from the OWID COVID-19 dataset and allows users to explore and analyze COVID-19 cases in various countries.
+The Tugas Besar Visualisasi Data project is a web application that provides interactive visualizations of COVID-19 in Asia data. The application uses data from the [OWID COVID-19](https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv) dataset and allows users to explore and analyze COVID-19 cases in various countries.
 
 # Features
 Interactive line chart: Users can select a country and a date range to view the daily new COVID-19 cases in the selected country over the selected period.
@@ -32,9 +32,9 @@ Copy code
 # Dependencies
 The following are the main dependencies used in this project:
 
-*pandas
-*bokeh
-*streamlit
+* pandas
+* bokeh
+* streamlit
 
 These dependencies are listed in the requirements.txt file.
 
@@ -42,4 +42,5 @@ These dependencies are listed in the requirements.txt file.
 [LinkedIn](https://www.linkedin.com/in/muhammad-abu-rijal-kusnaedi/)
 
 [Portfolio](https://aburijal26.wixsite.com/portfolio) 
+
 Please feel free to contribute to this project by submitting issues or pull requests.
