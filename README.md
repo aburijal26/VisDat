@@ -29,7 +29,7 @@ Open CMD
 Copy code
 
 ```
-# streamlit run app.py
+streamlit run app.py
 ```
 
 # Dependencies
