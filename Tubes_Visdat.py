@@ -16,7 +16,7 @@ df['date'] = pd.to_datetime(df['date'])
 st.markdown("<h1 style='text-align: center; font-size: 24px;'>COVID-19 Cases in Asia</h1>", unsafe_allow_html=True)
 
 # Create a figure for the line chart
-p = figure(width=700, height=250, x_axis_type="datetime")
+p = figure(width=700, height=300, x_axis_type="datetime")
 
 # Create a ColumnDataSource from the dataset
 source = ColumnDataSource(df)
