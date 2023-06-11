@@ -12,7 +12,7 @@ Responsive design: The web application is designed to be responsive and user-fri
 Web Application
 The web application is deployed using Streamlit and is accessible at the following URL:
 
-https://aburijal26-visdat-tubes-visdat-jau5mo.streamlit.app/
+[Tugas Besar Visualisasi Data](https://aburijal26-visdat-tubes-visdat-jau5mo.streamlit.app/)
 
 # Usage
 To run the web application locally, follow these steps:
@@ -27,7 +27,10 @@ Run the following command to start the web application:
 
 Open CMD
 Copy code
-'streamlit run app.py'
+
+```
+# streamlit run app.py
+```
 
 # Dependencies
 The following are the main dependencies used in this project:
