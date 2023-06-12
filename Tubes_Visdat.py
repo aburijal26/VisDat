@@ -25,7 +25,7 @@ source = ColumnDataSource(df)
 
 # Create a select widget for choosing the country
 countries = df['location'].unique().tolist()
-countries.insert(0, "All Countries in in Southeast Asia")  # Add "Select All" option
+countries.insert(0, "All Countries in Southeast Asia")  # Add "Select All" option
 country_select = st.selectbox("Country", countries)
 
 # Create a slider widget for selecting the date range
@@ -40,7 +40,7 @@ def update_data():
     start_date = date_range[0]
     end_date = date_range[1]
 
-    if country == "All Countries in in Southeast Asia":
+    if country == "All Countries in Southeast Asia":
         # Calculate total cases for all Southeast Asian countries and date range
         filtered_data = df[(df['date'] >= start_date) & (df['date'] <= end_date)]
         filtered_data = filtered_data.groupby('date')['new_cases_smoothed'].sum().reset_index()
