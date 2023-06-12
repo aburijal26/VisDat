@@ -25,7 +25,7 @@ source = ColumnDataSource(df)
 
 # Create a select widget for choosing the country
 countries = df['location'].unique().tolist()
-countries.insert(0, "Select All")  # Add "Select All" option
+countries.insert(0, "All Countries in in Southeast Asia")  # Add "Select All" option
 country_select = st.selectbox("Country", countries)
 
 # Create a slider widget for selecting the date range
