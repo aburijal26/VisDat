@@ -40,7 +40,7 @@ def update_data():
     start_date = date_range[0]
     end_date = date_range[1]
 
-    if country == "Select All":
+    if country == "All Countries in in Southeast Asia":
         # Calculate total cases for all Southeast Asian countries and date range
         filtered_data = df[(df['date'] >= start_date) & (df['date'] <= end_date)]
         filtered_data = filtered_data.groupby('date')['new_cases_smoothed'].sum().reset_index()
