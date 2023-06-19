@@ -18,6 +18,10 @@ To run the web application locally, follow these steps:
 
 Clone this repository to your local machine.
 
+```
+git clone https://github.com/aburijal26/VisDat
+```
+
 Install the required Python packages using the following command:
 
 ```
